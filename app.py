@@ -1,6 +1,6 @@
 import streamlit as st
 import main
-st.title("Bane interval tider kalkulator")
+st.title("Bane intervaltider kalkulator")
 st.header("For de som har mere i benene en i hovedet")
 
 st.divider()
