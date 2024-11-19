@@ -19,15 +19,18 @@ def convert_seconds(seconds):
 def print_time(time_pr_interval, n_intervals):
     time_n_intervals = 0
     time_lst = []
+    n_int_list = []
     for i in range(int(n_intervals)):
         time_n_intervals += time_pr_interval
         minutes, seconds = convert_seconds(time_n_intervals)
         if len(str(seconds)) == 1:
             seconds = f'0{seconds}'
+        n_int_list.append(f'{i+1}')
         time_lst.append(f'{minutes}:{seconds}')
         
         # print(f"Interval {i+1}: {minutes}:{seconds}")
-    return time_lst, range(int(n_intervals))
+    # return time_lst, range(int(n_intervals))
+    return time_lst, n_int_list
 
 def create_times(time_pr_interval, n_intervals):
     time_n_intervals = 0
