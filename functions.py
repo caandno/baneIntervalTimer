@@ -52,3 +52,10 @@ def populat_empty_cells(dict):
             dict[k] = v + [''] * (max_len - len(v))
 
     return dict
+
+
+def min_to_kmt(minutes, seconds):
+    sec_total = minutes*60 + seconds
+    km_t = 3600/sec_total
+    
+    return km_t
