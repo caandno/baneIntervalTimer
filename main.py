@@ -19,8 +19,10 @@ def main_function(minutes, seconds, length):
     # df.columns = pd.MultiIndex.from_tuples(column_headers)
     return df
 
-
-
+def min_to_kmt(minutes, seconds):
+    sec_total = minutes*60 + seconds
+    km_t = 3600/sec_total
+    return km_t
 
 if __name__ == "__main__":
     minutes = 4
@@ -28,4 +30,5 @@ if __name__ == "__main__":
     length = 10000
     df = main_function(minutes, seconds, length)
     
+
     print(df)
